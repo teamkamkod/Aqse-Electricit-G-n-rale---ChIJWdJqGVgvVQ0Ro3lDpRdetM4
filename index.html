@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqse Electricité Générale — électricien — Artigues-près-Bordeaux</title>
+  <meta name="description" content="Aqse Electricité Générale, votre électricien de confiance à Artigues-près-Bordeaux. Installation, dépannage et sécurité électrique." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1A237E;
+      --secondary: #FFC107;
+      --background: #F5F7FA;
+      --text: #222B45;
+      --cta: #FF5722;
+      --radius: 4px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --section-padding: 64px;
+      --white: #ffffff;
+      --light-gray: #e8eaf0;
+      --shadow: 0 4px 24px rgba(26,35,126,0.10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--background);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-heading); }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--primary);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__brand {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--white);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    .nav__brand span {
+      color: var(--secondary);
+    }
+
+    .nav__links {
+      display: none;
+      list-style: none;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav__links a {
+      color: rgba(255,255,255,0.88);
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav__links a:hover { color: var(--secondary); }
+
+    .nav__cta-btn {
+      background: var(--cta);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      font-weight: 700 !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+
+    .nav__cta-btn:hover {
+      background: #e64a19 !important;
+      transform: translateY(-1px);
+    }
+
+    .nav__hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+
+    .nav__hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav__mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: var(--primary);
+      z-index: 999;
+      padding: 20px 24px 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+
+    .nav__mobile-menu.open { display: block; }
+
+    .nav__mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .nav__mobile-menu ul li a {
+      display: block;
+      color: rgba(255,255,255,0.9);
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      letter-spacing: 0.03em;
+    }
+
+    .nav__mobile-menu ul li:last-child a { border-bottom: none; }
+
+    .nav__mobile-menu ul li a:hover { color: var(--secondary); }
+
+    @media (min-width: 768px) {
+      .nav__links { display: flex; }
+      .nav__hamburger { display: none; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 64px;
+      background: linear-gradient(135deg, #1A237E 0%, #283593 60%, #3949AB 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(255,193,7,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle, rgba(255,87,34,0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__text { flex: 1; }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,193,7,0.15);
+      border: 1px solid rgba(255,193,7,0.4);
+      color: var(--secondary);
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+    }
+
+    .hero__badge::before {
+      content: '⚡';
+      font-size: 0.9rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 span { color: var(--secondary); }
+
+    .hero__sub {
+      font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 36px;
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    .hero__buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      text-align: center;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: var(--cta);
+      color: var(--white);
+      box-shadow: 0 4px 18px rgba(255,87,34,0.35);
+    }
+
+    .btn-primary:hover {
+      background: #e64a19;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255,87,34,0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero__visual {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__icon-box {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 4/3;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 32px;
+    }
+
+    .hero__icon-box .icon-main {
+      font-size: 5rem;
+      line-height: 1;
+    }
+
+    .hero__icon-box p {
+      color: rgba(255,255,255,0.7);
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero__stats {
+      display: flex;
+      gap: 24px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .hero__stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__stat strong {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+
+    .hero__stat span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 500;
+    }
+
+    @media (min-width: 768px) {
+      .hero__inner {
+        flex-direction: row;
+        align-items: center;
+        padding: 80px 40px;
+      }
+
+      .hero__buttons {
+        flex-direction: row;
+      }
+
+      .btn { width: auto; }
+    }
+
+    /* ===== SECTION BASE ===== */
+    .section {
+      padding: 64px 20px;
+    }
+
+    .section--alt {
+      background: var(--white);
+    }
+
+    .section__header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section__header h2 {
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .section__header p {
+      color: #5a6480;
+      font-size: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .section__divider {
+      width: 56px;
+      height: 4px;
+      background: var(--secondary);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ===== SERVICES ===== */
+    .services__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--secondary);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(26,35,126,0.15);
+    }
+
+    .service-card__icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: rgba(26,35,126,0.07);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-card__body h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .service-card__body p {
+      font-size: 0.9rem;
+      color: #5a6480;
+      line-height: 1.55;
+    }
+
+    @media (min-width: 600px) {
+      .services__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 1024px) {
+      .services__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* ===== ZONE INTERVENTION ===== */
+    .zone {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .zone .section__header h2 { color: var(--white); }
+    .zone .section__header p { color: rgba(255,255,255,0.75); }
+
+    .zone__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .zone__text h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+
+    .zone__text p {
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .zone__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .zone__tag {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.9);
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+    }
+
+    .zone__map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      height: 300px;
+    }
+
+    .zone__map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (min-width: 768px) {
+      .zone__inner { grid-template-columns: 1fr 1fr; }
+      .zone__map { height: 380px; }
+    }
+
+    /* ===== AVIS CLIENTS ===== */
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 12px; left: 20px;
+      font-size: 4rem;
+      color: var(--secondary);
+      font-family: Georgia, serif;
+      line-height: 1;
+      opacity: 0.5;
+    }
+
+    .review-card__stars {
+      color: var(--secondary);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .review-card__text {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 16px;
+      padding-top: 8px;
+    }
+
+    .review-card__author {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--primary);
+    }
+
+    .reviews__google-badge {
+      text-align: center;
+      margin-top: 36px;
+    }
+
+    .reviews__google-badge a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius);
+      padding: 12px 24px;
+      box-shadow: var(--shadow);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--primary);
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .reviews__google-badge a:hover {
+      box-shadow: 0 6px 24px rgba(26,35,126,0.15);
+      transform: translateY(-2px);
+    }
+
+    .reviews__google-badge .stars { color: var(--secondary); font-size: 1rem; }
+
+    /* ===== PRESENTATION / ABOUT ===== */
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about__visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .about__icon-card {
+      background: var(--primary);
+      border-radius: var(--radius);
+      padding: 28px;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .about__icon-card .icon { font-size: 3rem; margin-bottom: 12px; }
+
+    .about__icon-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--secondary);
+    }
+
+    .about__icon-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .about__cards-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .about__text h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .about__text p {
+      color: #5a6480;
+      line-height: 1.75;
+      margin-bottom: 24px;
+      font-size: 0.97rem;
+    }
+
+    .about__trust {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .about__trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .about__trust-item span:first-child {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+      .about__inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ===== DEVIS RAPIDE ===== */
+    .devis {
+      background: linear-gradient(135deg, var(--cta) 0%, #e64a19 100%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .devis h2 {
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .devis p {
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.65;
+    }
+
+    .devis__actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .devis__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      color: var(--cta);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      transition: transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .devis__phone:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+    }
+
+    .devis__form-btn {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.7);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      width: 100%;
+    }
+
+    .devis__form-btn:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: var(--white);
+    }
+
+    @media (min-width: 768px) {
+      .devis__actions { flex-direction: row; justify-content: center; }
+      .devis__phone, .devis__form-btn { width: auto; }
+    }
+
+    /* ===== CONTACT ===== */
+    .contact__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .contact__info h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .contact__info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact__info-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact__info-text strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+
+    .contact__info-text span {
+      font-size: 0.92rem;
+      color: #5a6480;
+    }
+
+    .contact__hours {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      margin-top: 8px;
+    }
+
+    .contact__hours h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .hours-table tr td {
+      padding: 6px 0;
+      font-size: 0.88rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .hours-table tr:last-child td { border-bottom: none; }
+
+    .hours-table td:first-child {
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: capitalize;
+      width: 50%;
+    }
+
+    .hours-table td:last-child { color: #5a6480; }
+
+    .hours-closed { color: #e53935 !important; font-weight: 600 !important; }
+
+    .contact__form-wrap {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact__form-wrap h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .contact__form-wrap p {
+      font-size: 0.9rem;
+      color: #5a6480;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--light-gray);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--background);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26,35,126,0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form__submit {
+      width: 100%;
+      background: var(--cta);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 15px;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(255,87,34,0.3);
+    }
+
+    .form__submit:hover {
+      background: #e64a19;
+      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      .contact__inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #0d1547;
+      color: rgba(255,255,255,0.75);
+      padding: 48px 20px 28px;
+    }
+
+    .footer__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .footer__brand h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .footer__brand h3 span { color: var(--secondary); }
+
+    .footer__brand p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer__col h4 {
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .footer__col p,
+    .footer__col a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer__col a:hover { color: var(--secondary); }
+
+    .footer__rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      margin-top: 12px;
+    }
+
+    .footer__rating .stars { color: var(--secondary); font-size: 0.95rem; }
+
+    .footer__rating .rating-text {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer__bottom {
+      max-width: 1200px;
+      margin: 32px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer__bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    @media (min-width: 768px) {
+      .footer__inner { grid-template-columns: 2fr 1fr 1fr; }
+      .footer__bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+    }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      animation: fadeInOverlay 0.2s ease;
+    }
+
+    @keyframes fadeInOverlay {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      width: 90%;
+      max-width: 420px;
+      position: relative;
+      animation: fadeInCard 0.2s ease;
+    }
+
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px; right: 14px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: #888;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover { color: var(--text); }
+
+    .modal-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      padding-right: 24px;
+    }
+
+    .modal-card p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .modal-cta {
+      display: block;
+      width: 100%;
+      background: var(--cta);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px;
+      border-radius: var(--radius);
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .modal-cta:hover { background: #e64a19; }
+
+    /* ===== TRUST SIGNALS ===== */
+    .trust {
+      background: var(--primary);
+    }
+
+    .trust__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .trust__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      padding: 20px 12px;
+    }
+
+    .trust__item .icon {
+      font-size: 2rem;
+      width: 56px;
+      height: 56px;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust__item h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .trust__item p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    @media (min-width: 768px) {
+      .trust__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      box-shadow: 0 4px 16px rgba(26,35,126,0.3);
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .scroll-top.visible { display: flex; }
+    .scroll-top:hover { background: #283593; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand">Aqse <span>Électricité</span></a>
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#zone-intervention">Zone</a></li>
+        <li><a href="#avis-clients">Avis</a></li>
+        <li><a href="#presentation">À propos</a></li>
+        <li><a href="#contact" class="nav__cta-btn">Devis gratuit</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+    <ul>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#zone-intervention" class="mobile-link">Zone d'intervention</a></li>
+      <li><a href="#avis-clients" class="mobile-link">Avis clients</a></li>
+      <li><a href="#presentation" class="mobile-link">À propos</a></li>
+      <li><a href="#devis-rapide" class="mobile-link">Devis rapide</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__inner container">
+      <div class="hero__text fade-in">
+        <div class="hero__badge">Électricien certifié — Gironde</div>
+        <h1>Votre électricien<br /><span>de confiance</span></h1>
+        <p class="hero__sub">Installation, dépannage et mise aux normes à Artigues-près-Bordeaux.</p>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn btn-primary">Demander un devis</a>
+          <a href="#services" class="btn btn-secondary">En savoir plus</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <strong>⚡</strong>
+            <span>Intervention rapide</span>
+          </div>
+          <div class="hero__stat">
+            <strong>✓</strong>
+            <span>Certifié & assuré</span>
+          </div>
+          <div class="hero__stat">
+            <strong>★ 5/5</strong>
+            <span>Avis clients</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual fade-in">
+        <div class="hero__icon-box">
+          <div class="icon-main">⚡</div>
+          <p>Électricité Générale<br />Artigues-près-Bordeaux</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>Nos Services</h2>
+        <div class="section__divider"></div>
+        <p>Des solutions électriques complètes pour particuliers et professionnels en Gironde.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card fade-in">
+          <div class="service-card__icon">🔧</div>
+          <div class="service-card__body">
+            <h3>Dépannage électrique urgent</h3>
+            <p>Intervention rapide pour tous vos problèmes électriques.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-card__icon">🔌</div>
+          <div class="service-card__body">
+            <h3>Installation électrique</h3>
+            <p>Solutions sur mesure pour vos installations électriques.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-card__icon">📋</div>
+          <div class="service-card__body">
+            <h3>Mise aux normes</h3>
+            <p>Assurez la conformité de vos installations électriques.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-card__icon">🛡️</div>
+          <div class="service-card__body">
+            <h3>Sécurité électrique</h3>
+            <p>Protégez votre maison avec nos solutions de sécurité.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+  <section class="section trust" id="trust">
+    <div class="container">
+      <div class="trust__grid">
+        <div class="trust__item fade-in">
+          <div class="icon">🏅</div>
+          <h4>Certifié & qualifié</h4>
+          <p>Professionnels certifiés avec assurance décennale</p>
+        </div>
+        <div class="trust__item fade-in">
+          <div class="icon">⚡</div>
+          <h4>Intervention rapide</h4>
+          <p>Disponible pour vos urgences électriques</p>
+        </div>
+        <div class="trust__item fade-in">
+          <div class="icon">💬</div>
+          <h4>Devis gratuit</h4>
+          <p>Estimation transparente sans engagement</p>
+        </div>
+        <div class="trust__item fade-in">
+          <div class="icon">🔒</div>
+          <h4>Travaux garantis</h4>
+          <p>Qualité et sécurité assurées sur chaque chantier</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE INTERVENTION -->
+  <section class="section zone" id="zone-intervention">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>Zone d'Intervention</h2>
+        <div class="section__divider"></div>
+        <p>Nous intervenons à Artigues-près-Bordeaux et dans toute la Gironde.</p>
+      </div>
+      <div class="zone__inner">
+        <div class="zone__text fade-in">
+          <h3>Gironde et alentours</h3>
+          <p>Aqse Electricité Générale intervient rapidement sur Artigues-près-Bordeaux et les communes environnantes. Que vous soyez un particulier ou un professionnel, notre équipe se déplace chez vous pour tous vos besoins électriques.</p>
+          <div class="zone__tags">
+            <span class="zone__tag">Artigues-près-Bordeaux</span>
+            <span class="zone__tag">Bordeaux</span>
+            <span class="zone__tag">Mérignac</span>
+            <span class="zone__tag">Pessac</span>
+            <span class="zone__tag">Mérignac</span>
+            <span class="zone__tag">Gironde (33)</span>
+          </div>
+        </div>
+        <div class="zone__map fade-in">
+          <iframe
+            src="https://maps.google.com/maps?q=44.852823199999996,-0.48094709999999996&z=16&output=embed"
+            title="Localisation Aqse Electricité Générale"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS CLIENTS -->
+  <section class="section section--alt" id="avis-clients">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>Avis Clients</h2>
+        <div class="section__divider"></div>
+        <p>La satisfaction de nos clients est notre priorité absolue.</p>
+      </div>
+      <div class="reviews__grid">
+        <div class="review-card fade-in">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Excellent service ! Intervention rapide et professionnelle. Je recommande vivement Aqse Electricité Générale pour tous vos travaux électriques à Artigues-près-Bordeaux et en Gironde.</p>
+          <div class="review-card__author">— Client satisfait, Artigues-près-Bordeaux</div>
+        </div>
+      </div>
+      <div class="reviews__google-badge fade-in">
+        <a href="https://search.google.com/local/reviews?placeid=ChIJWdJqGVgvVQ0Ro3lDpRdetM4" target="_blank" rel="noopener">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">5,0 / 5 — Voir les avis Google</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTATION / ABOUT -->
+  <section class="section" id="presentation">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__visual fade-in">
+          <div class="about__icon-card">
+            <div class="icon">⚡</div>
+            <h4>Expertise électrique</h4>
+            <p>Des professionnels qualifiés à votre service en Gironde</p>
+          </div>
+          <div class="about__cards-row">
+            <div class="about__icon-card" style="background: rgba(26,35,126,0.85);">
+              <div class="icon" style="font-size:1.8rem; margin-bottom:8px;">🏅</div>
+              <h4 style="font-size:0.85rem;">Certifié</h4>
+              <p style="font-size:0.78rem;">Assurance décennale</p>
+            </div>
+            <div class="about__icon-card" style="background: rgba(255,87,34,0.9);">
+              <div class="icon" style="font-size:1.8rem; margin-bottom:8px;">🔧</div>
+              <h4 style="font-size:0.85rem;">Urgences</h4>
+              <p style="font-size:0.78rem;">Intervention rapide</p>
+            </div>
+          </div>
+        </div>
+        <div class="about__text fade-in">
+          <h2>À propos de nous</h2>
+          <p>Aqse Electricité Générale est votre partenaire de confiance pour tous vos besoins électriques à Artigues-près-Bordeaux et en Gironde. Notre équipe d'experts qualifiés est dédiée à fournir des services électriques fiables et sécurisés, que ce soit pour des installations, des dépannages urgents ou des mises aux normes.</p>
+          <p>Nous nous engageons à offrir une intervention rapide et un service client exceptionnel, soutenus par nos certifications professionnelles et notre assurance décennale.</p>
+          <div class="about__trust">
+            <div class="about__trust-item">
+              <span>✅</span>
+              <span>Certifications professionnelles reconnues</span>
+            </div>
+            <div class="about__trust-item">
+              <span>✅</span>
+              <span>Assurance décennale incluse</span>
+            </div>
+            <div class="about__trust-item">
+              <span>✅</span>
+              <span>Devis gratuit et transparent</span>
+            </div>
+            <div class="about__trust-item">
+              <span>✅</span>
+              <span>Intervention rapide en Gironde</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVIS RAPIDE -->
+  <section class="section devis" id="devis-rapide">
+    <div class="container">
+      <h2 class="fade-in">Besoin d'un devis rapide ?</h2>
+      <p class="fade-in">Contactez-nous dès maintenant pour obtenir une estimation gratuite. Notre équipe répond rapidement à toutes vos demandes.</p>
+      <div class="devis__actions fade-in">
+        <a href="tel:+33626451475" class="devis__phone">
+          📞 +33 6 26 45 14 75
+        </a>
+        <a href="#contact" class="devis__form-btn">Formulaire de contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>Contactez-nous</h2>
+        <div class="section__divider"></div>
+        <p>Pour toute demande, remplissez notre formulaire de contact.</p>
+      </div>
+      <div class="contact__inner">
+        <div class="contact__info fade-in">
+          <h3>Nos coordonnées</h3>
+          <div class="contact__info-item">
+            <div class="contact__info-icon">📍</div>
+            <div class="contact__info-text">
+              <strong>Adresse</strong>
+              <span>10 Rue d'Allemagne<br />33370 Artigues-près-Bordeaux<br />France</span>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <div class="contact__info-icon">📞</div>
+            <div class="contact__info-text">
+              <strong>Téléphone</strong>
+              <span><a href="tel:+33626451475" style="color:#5a6480;">+33 6 26 45 14 75</a></span>
+            </div>
+          </div>
+          <div class="contact__info-item">
+            <div class="contact__info-icon">🗺️</div>
+            <div class="contact__info-text">
+              <strong>Itinéraire</strong>
+              <span><a href="https://maps.google.com/?q=44.852823199999996,-0.48094709999999996" target="_blank" rel="noopener" style="color: var(--primary); font-weight:600;">Voir sur Google Maps →</a></span>
+            </div>
+          </div>
+          <div class="contact__hours">
+            <h4>Horaires d'ouverture</h4>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td>Lundi</td>
+                  <td>09:00 – 18:00</td>
+                </tr>
+                <tr>
+                  <td>Mardi</td>
+                  <td>09:00 – 18:00</td>
+                </tr>
+                <tr>
+                  <td>Mercredi</td>
+                  <td>09:00 – 18:00</td>
+                </tr>
+                <tr>
+                  <td>Jeudi</td>
+                  <td>09:00 – 18:00</td>
+                </tr>
+                <tr>
+                  <td>Vendredi</td>
+                  <td>09:00 – 18:00</td>
+                </tr>
+                <tr>
+                  <td>Samedi</td>
+                  <td class="hours-closed">Fermé</td>
+                </tr>
+                <tr>
+                  <td>Dimanche</td>
+                  <td class="hours-closed">Fermé</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="contact__form-wrap fade-in">
+          <h3>Envoyez-nous un message</h3>
+          <p>Pour toute demande, remplissez notre formulaire de contact.</p>
+          <form id="contactForm" action="#" novalidate>
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse e-mail</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+33 6 00 00 00 00" />
+            </div>
+            <div class="form-group">
+              <label for="service">Type de service</label>
+              <select id="service" name="service">
+                <option value="">Sélectionnez un service</option>
+                <option value="depannage">Dépannage électrique urgent</option>
+                <option value="installation">Installation électrique</option>
+                <option value="normes">Mise aux normes</option>
+                <option value="securite">Sécurité électrique</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Décrivez votre besoin..." required></textarea>
+            </div>
+            <button type="submit" class="form__submit">Envoyer ma demande</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <h3>Aqse <span>Electricité</span> Générale</h3>
+        <p>Votre électricien de confiance à Artigues-près-Bordeaux et en Gironde. Installation, dépannage et mise aux normes.</p>
+        <div class="footer__rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">5,0 / 5 · 1 avis Google</span>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <a href="#services">Dépannage urgent</a>
+        <a href="#services">Installation électrique</a>
+        <a href="#services">Mise aux normes</a>
+        <a href="#services">Sécurité électrique</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>10 Rue d'Allemagne<br />33370 Artigues-près-Bordeaux</p>
+        <a href="tel:+33626451475">+33 6 26 45 14 75</a>
+        <a href="https://maps.google.com/?q=44.852823199999996,-0.48094709999999996" target="_blank" rel="noopener">Voir sur Google Maps →</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2024 Aqse Electricité Générale — Tous droits réservés</p>
+      <p>Artigues-près-Bordeaux, Gironde (33)</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scrollTop" aria-label="Retour en haut">↑</button>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+      <h2 id="modalTitle">Activez votre formulaire de contact</h2>
+      <p>
+        Merci pour votre intérêt ! Pour que votre message soit bien transmis à <strong>Aqse Electricité Générale</strong>, le formulaire de contact doit être activé.
+        <br /><br />
+        Cette fonctionnalité est disponible après l'activation de votre site. Cliquez ci-dessous pour en savoir plus et mettre votre site en ligne dès aujourd'hui.
+      </p>
+      <a
+        href="mailto:team@kamkod.com?subject=Website%20Aqse%20Electricit%C3%A9%20G%C3%A9n%C3%A9rale%20%E2%80%94%20ChIJWdJqGVgvVQ0Ro3lDpRdetM4"
+        class="modal-cta"
+      >
+        Activer mon site maintenant
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // ===== HAMBURGER MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', function (e) {
+      if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // ===== SCROLL ANIMATIONS =====
+    const fadeEls = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(function (el) {
+      observer.observe(el);
+    });
+
+    // ===== SCROLL TO TOP =====
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== MODAL =====
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    const contactForm = document.getElementById('contactForm');
+
+    function openModal() {
+      modalOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      openModal();
+    });
+
+    modalClose.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', function (e) {
+      if (e.target === modalOverlay) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    // ===== SMOOTH SCROLL FOR ALL ANCHOR LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const navHeight = 64;
+          const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ===== HERO FADE IN ON LOAD =====
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.hero .fade-in').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>
